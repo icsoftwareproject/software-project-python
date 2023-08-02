@@ -1,0 +1,24 @@
+
+participant Instantion Code as ic
+participant Python as python
+participant LightSwitch class as lsc1
+
+ic -> python: oLightSwitch = LightSwitch()
+Note over python: Allocates space for a \n LightSwitch object
+
+python -> lsc: Calls _init_() method\n of the LightSwitch class, \n passing in the new object
+
+Note over lsc: _init_() method runs,\n sets value of "self" \n to the new object
+
+lsc -> ic: Initializes any instance variables\n and returns the new object 
+
+#[Note] <object> = <ClassName>(<optional arguments>)
+
+#[Note] You can make a class variable in two ways: 
+    # You can place the code of the class in the same file with 
+    # the main program, or you can put the code of the class in a 
+    # external file and use an "import" statement to bring in the 
+    # contents of the file 
+
+# [Note] The only rule is that the class definition must precede 
+# any code that instantiates an objects from the class  
